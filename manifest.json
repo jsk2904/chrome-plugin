@@ -1,0 +1,35 @@
+{
+    "manifest_version": 2,
+    "name": "Message passing",
+    "description": "Populate fields and call an api",
+    "homepage_url": "http://locaalhost:8000",
+    "version": "1.0",
+    "browser_action": {
+        "default_title": "Click here to load form data!",
+        "default_popup": "index.html"
+    },
+    "oauth2":{
+        "client_id":"431051594565-f6eu2s6c4t6gkus0evihjgvghlrj9asj.apps.googleusercontent.com",
+        "scopes":[
+            "https://www.googleapis.com/auth/userinfo.email"
+        ]
+    },
+
+    "background": {
+        "scripts": ["injector.js"]
+    },
+
+    "permissions": [
+        "cookies",
+        "tabs",
+        "storage",
+        "http://*/*",
+        "https://*/*",
+        "identity",
+        "notifications"
+    ],
+
+    "content_security_policy": "script-src 'self' 'unsafe-eval' https://cdn.auth0.com; object-src 'self'"
+}
+
+
